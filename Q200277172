@@ -1,0 +1,36 @@
+//Write a function definition using the prototype and main code that follows. 
+//The function should calculate the min and max values of the array and store them in the corresponding variables. 
+//Complete the main program by calling your function using the variables defined in main. 
+//Print the value of any variable whose value has changed as a result of the function call.
+
+//Brooke Bellew 00277172 Question 2
+
+#include <stdio.h>
+ int i=0;
+ int j=0;
+void calc(float ar[], int size, float* min, float *max);
+
+int main()
+{
+  float numbers[5] = {3.2, 0.8, 6.0, 6.4, 3.6};
+  int size = 5;
+  float min=0;
+  float max=0;
+ calc(numbers,size,&min,&max);
+ printf("%f   %f",max,min);
+ 
+}
+void calc(float ar[], int size, float* min, float *max){
+for (i = 0; i <size; ++i) {
+        if (ar[i]>*max){
+        *max=ar[i];
+        }
+ *min=ar[0];
+
+      for (j = 0; j <size; ++j) {
+        if (ar[j]<*min){
+        *min=ar[j];
+        }
+}
+}
+}
